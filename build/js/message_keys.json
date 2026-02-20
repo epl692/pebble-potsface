@@ -1,0 +1,9 @@
+{
+    "BackgroundColor": 10003,
+    "CONDITIONS": 10001,
+    "REQUEST_WEATHER": 10002,
+    "ShowDate": 10006,
+    "TEMPERATURE": 10000,
+    "TemperatureUnit": 10005,
+    "TextColor": 10004
+}

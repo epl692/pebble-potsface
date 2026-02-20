@@ -10,6 +10,7 @@
     "pebble": {
         "capabilities": [
             "location",
+            "health",
             "configurable"
         ],
         "displayName": "Tutorial Watchface",

@@ -1,0 +1,68 @@
+{
+    "capabilities": [
+        "configurable",
+        "health",
+        "location"
+    ],
+    "displayName": "Tutorial Watchface",
+    "enableMultiJS": true,
+    "messageKeys": {
+        "TEMPERATURE": 10000,
+        "CONDITIONS": 10001,
+        "REQUEST_WEATHER": 10002,
+        "BackgroundColor": 10003,
+        "TextColor": 10004,
+        "TemperatureUnit": 10005,
+        "ShowDate": 10006
+    },
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "compatibility": "2.7",
+                "file": "fonts/Jersey10-Regular.ttf",
+                "name": "FONT_JERSEY_56",
+                "type": "font"
+            },
+            {
+                "compatibility": "2.7",
+                "file": "fonts/Jersey10-Regular.ttf",
+                "name": "FONT_JERSEY_24",
+                "type": "font"
+            },
+            {
+                "file": "images/bt-icon.png",
+                "name": "IMAGE_BT_ICON",
+                "type": "bitmap"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "targetPlatforms": [
+        "aplite",
+        "basalt",
+        "chalk",
+        "diorite",
+        "emery",
+        "flint",
+        "gabbro"
+    ],
+    "uuid": "F12F8A05-DCAD-4650-A646-2319AD1342B3",
+    "watchapp": {
+        "watchface": true
+    },
+    "name": "watchface-tutorial",
+    "shortName": "Tutorial Watchface",
+    "longName": "Tutorial Watchface",
+    "versionLabel": "1.0",
+    "companyName": "MakeAwesomeHappen",
+    "appKeys": {
+        "TEMPERATURE": 10000,
+        "CONDITIONS": 10001,
+        "REQUEST_WEATHER": 10002,
+        "BackgroundColor": 10003,
+        "TextColor": 10004,
+        "TemperatureUnit": 10005,
+        "ShowDate": 10006
+    }
+}
