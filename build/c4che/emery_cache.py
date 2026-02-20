@@ -9,12 +9,12 @@ BUNDLE_BIN_DIR = 'emery'
 BUNDLE_NAME = 'pebble-potsface.pbw'
 CC = ['arm-none-eabi-gcc']
 CCLNK_SRC_F = []
-CCLNK_TGT_F = ['-o', '']
+CCLNK_TGT_F = ['-o']
 CC_NAME = 'gcc'
 CC_SRC_F = []
 CC_TGT_F = ['-c', '-o']
-CC_VERSION = ('4', '7', '2')
-CFLAGS = ['-std=c99', '-mcpu=cortex-m3', '-mthumb', '-ffunction-sections', '-fdata-sections', '-g', '-fPIE', '-Os', '-D_TIME_H_', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-error=unused-function', '-Wno-error=unused-variable']
+CC_VERSION = ('14', '2', '1')
+CFLAGS = ['-std=c99', '-mcpu=cortex-m3', '-mthumb', '-ffunction-sections', '-fdata-sections', '-fcommon', '-g', '-fPIE', '-Os', '-D_TIME_H_', '-Dtime_t=long', '-Wall', '-Wextra', '-Werror', '-Wno-unused-parameter', '-Wno-error=unused-function', '-Wno-error=unused-variable', '-Wno-error=builtin-declaration-mismatch', '-Wno-error=format-truncation', '-Wno-error=expansion-to-defined', '-Wno-error=zero-length-bounds', '-Wno-error=cast-function-type']
 CFLAGS_MACBUNDLE = ['-fPIC']
 CFLAGS_cshlib = ['-fPIC']
 CPPPATH_ST = '-I%s'
@@ -44,7 +44,7 @@ NODE_PATH = '/home/epl692/.pebble-sdk/SDKs/current/node_modules'
 PEBBLE_SDK_COMMON = '/home/epl692/.pebble-sdk/SDKs/current/sdk-core/pebble/common'
 PEBBLE_SDK_PLATFORM = '/home/epl692/.pebble-sdk/SDKs/current/sdk-core/pebble/emery'
 PEBBLE_SDK_ROOT = '/home/epl692/.pebble-sdk/SDKs/current/sdk-core/pebble'
-PLATFORM = {'NAME': 'emery', 'MAX_APP_BINARY_SIZE': 131072, 'MAX_APP_MEMORY_SIZE': 131072, 'MAX_WORKER_MEMORY_SIZE': 10240, 'MAX_RESOURCES_SIZE_APPSTORE': 262144, 'MAX_RESOURCES_SIZE': 1048576, 'DEFINES': ['PBL_PLATFORM_EMERY', 'PBL_COLOR', 'PBL_RECT', 'PBL_MICROPHONE', 'PBL_SMARTSTRAP', 'PBL_HEALTH', 'PBL_SMARTSTRAP_POWER', 'PBL_COMPASS', 'PBL_DISPLAY_WIDTH=200', 'PBL_DISPLAY_HEIGHT=228'], 'BUILD_DIR': 'emery', 'BUNDLE_BIN_DIR': 'emery', 'ADDITIONAL_TEXT_LINES_FOR_PEBBLE_H': [], 'MAX_FONT_GLYPH_SIZE': 320, 'TAGS': ['emery', 'color', 'rect', 'mic', 'strap', 'health', 'strappower', 'compass', '200w', '228h']}
+PLATFORM = {'NAME': 'emery', 'MAX_APP_BINARY_SIZE': 131072, 'MAX_APP_MEMORY_SIZE': 131072, 'MAX_WORKER_MEMORY_SIZE': 10240, 'MAX_RESOURCES_SIZE_APPSTORE': 262144, 'MAX_RESOURCES_SIZE': 1048576, 'DEFINES': ['PBL_PLATFORM_EMERY', 'PBL_COLOR', 'PBL_RECT', 'PBL_MICROPHONE', 'PBL_SMARTSTRAP', 'PBL_HEALTH', 'PBL_SMARTSTRAP_POWER', 'PBL_COMPASS', 'PBL_DISPLAY_WIDTH=200', 'PBL_DISPLAY_HEIGHT=228'], 'BUILD_DIR': 'emery', 'BUNDLE_BIN_DIR': 'emery', 'ADDITIONAL_TEXT_LINES_FOR_PEBBLE_H': [], 'MAX_FONT_GLYPH_SIZE': 512, 'TAGS': ['emery', 'color', 'rect', 'mic', 'strap', 'health', 'strappower', 'compass', '200w', '228h']}
 PLATFORM_NAME = 'emery'
 PREFIX = '/usr/local'
 PROJECT_INFO = {'capabilities': ['location', 'health', 'configurable'], 'displayName': 'Tutorial Watchface', 'enableMultiJS': True, 'messageKeys': {'TEMPERATURE': 10000, 'CONDITIONS': 10001, 'REQUEST_WEATHER': 10002, 'BackgroundColor': 10003, 'TextColor': 10004, 'TemperatureUnit': 10005, 'ShowDate': 10006}, 'projectType': 'native', 'resources': {'media': [{'compatibility': '2.7', 'file': 'fonts/Jersey10-Regular.ttf', 'name': 'FONT_JERSEY_56', 'type': 'font'}, {'compatibility': '2.7', 'file': 'fonts/Jersey10-Regular.ttf', 'name': 'FONT_JERSEY_24', 'type': 'font'}, {'file': 'images/bt-icon.png', 'name': 'IMAGE_BT_ICON', 'type': 'bitmap'}]}, 'sdkVersion': '3', 'targetPlatforms': ['aplite', 'basalt', 'chalk', 'diorite', 'emery', 'flint', 'gabbro'], 'uuid': 'F12F8A05-DCAD-4650-A646-2319AD1342B3', 'watchapp': {'watchface': True}, 'name': 'watchface-tutorial', 'shortName': 'Tutorial Watchface', 'longName': 'Tutorial Watchface', 'versionLabel': '1.0', 'companyName': 'MakeAwesomeHappen', 'appKeys': {'TEMPERATURE': 10000, 'CONDITIONS': 10001, 'REQUEST_WEATHER': 10002, 'BackgroundColor': 10003, 'TextColor': 10004, 'TemperatureUnit': 10005, 'ShowDate': 10006}}
@@ -53,16 +53,16 @@ RESOURCES_JSON = [{'compatibility': '2.7', 'file': 'fonts/Jersey10-Regular.ttf',
 RPATH_ST = '-Wl,-rpath,%s'
 SANDBOX = False
 SDK_VERSION_MAJOR = 5
-SDK_VERSION_MINOR = 86
+SDK_VERSION_MINOR = 87
 SHLIB_MARKER = None
 SIZE = 'arm-none-eabi-size'
 SONAME_ST = '-Wl,-h,%s'
 STLIBPATH_ST = '-L%s'
 STLIB_MARKER = None
 STLIB_ST = '-l%s'
-SUPPORTED_PLATFORMS = ['chalk', 'basalt', 'aplite', 'diorite', 'emery', 'flint']
-TARGET_PLATFORMS = ['flint', 'emery', 'diorite', 'chalk', 'basalt', 'aplite']
-TIMESTAMP = 1771627495
+SUPPORTED_PLATFORMS = ['gabbro', 'chalk', 'basalt', 'aplite', 'diorite', 'emery', 'flint']
+TARGET_PLATFORMS = ['gabbro', 'flint', 'emery', 'diorite', 'chalk', 'basalt', 'aplite']
+TIMESTAMP = 1771627951
 USE_GROUPS = True
 VERBOSE = 0
 WEBPACK = ['/home/epl692/.pebble-sdk/SDKs/current/node_modules/.bin/webpack']

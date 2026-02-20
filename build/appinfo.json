@@ -1,8 +1,8 @@
 {
     "capabilities": [
-        "configurable",
+        "location",
         "health",
-        "location"
+        "configurable"
     ],
     "displayName": "Tutorial Watchface",
     "enableMultiJS": true,
